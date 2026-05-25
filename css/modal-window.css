@@ -1,0 +1,94 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+.modal__wrapper {
+    padding: 30px;
+    background-color: #fff;
+    max-width: 600px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.model--open {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+
+    color: red;
+    font-style: italic;
+}
+
+
+
+.btn--open {
+    border-radius: 15px;
+    width: 250px;
+    height: 30px;
+    border: darkred 1.2px solid;
+    color: rgb(88, 1, 1);
+}
+
+.btn--open:hover {
+    border: darkred 1.2px solid;
+    /* background-color: rgb(0, 0, 0, 0.3); */
+    color: darkslategray;
+}
+
+.btn--open:focus {
+    border: darkred 1.2px solid;
+    /* background-color: rgb(0, 0, 0, 0.3); */
+    color: darkgoldenrod;
+}
+
+
+/* .modal--close {
+    pointer-events: none;
+    opacity: 0;
+
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+} */
+
+.btn--close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 15px;
+    width: 250px;
+    height: 30px;
+    border: darkred 1.2px solid;
+    color: rgb(88, 1, 1);
+}
+
+.btn--close:hover {
+    border: darkred 1.2px solid;
+    background: #fff;
+    color: darkslategray;
+}
+
+.btn--close:focus {
+    border: darkred 1.2px solid;
+    background: #fff;
+    color: darkgoldenrod;
+}

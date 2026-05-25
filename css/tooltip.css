@@ -1,0 +1,35 @@
+.tooltip {
+    color: red;
+    font-style: italic;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 200px;
+    padding: 10px;
+    background-color: darkblue;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+
+    transition: background-color 1s ease-in-out,
+    opacity 0.2s ease-in-out;
+    transition: color 1s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+
+
+.tooltip-animated::after {
+    transform: translatey(100%);
+    opacity: 1;
+    background-color: aqua;
+    color:black;
+}

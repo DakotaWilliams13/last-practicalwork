@@ -1,0 +1,154 @@
+.burger {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 110;
+
+    right: 30px;
+    top: 30px;
+}
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+.burger__line:nth-child(1) {
+    top: 0;
+}
+.burger__line:nth-child(2) {
+    top: 20px;
+}
+.burger__line:nth-child(3) {
+    top: 20px;
+}
+.burger__line:nth-child(4) {
+    top: 40px;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    padding-top: 100px;
+    /* background-color: darkblue; */
+    background-color: gray;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* transform: translateY(0); */
+    transform: transition(- 100%); /*  ЧТО ДЕЛАЕТ???? */
+    transition: transform 0.3s ease;
+}
+.main-nav__list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+.main-nav__item {
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+}
+.main-nav__link {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 550;
+}
+.main-nav__link:hover {
+    color: darkred;
+}
+.main-nav__link:focus {
+    color: orangered;
+}
+
+/*  */
+.menu__logo-link,
+.menu__burger {
+ z-index: 120;
+}
+
+.menu--open .main-nav {
+    transform: translate(0%);
+    transition: transform 0.2s ease;
+    background-color: darkblue;
+    
+}
+.menu--open .main-nav__item {
+    opacity: 1;
+}
+
+.menu--open .main-nav__item:nth-child(1) {
+    transition-delay: 0.3s;
+}
+.menu--open .main-nav__item:nth-child(2) {
+    transition-delay: 0.4s;
+}
+.menu--open .main-nav__item:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+
+
+.menu__logo-link {
+    position: absolute;
+    color: #fff;
+    left: 30px;
+    top: 30px;
+}
+
+
+
+.menu--open .burger__line:nth-child(1) {
+    transform: scaleX(0);
+}
+.menu--open .burger__line:nth-child(2) {
+    transform: rotate(45deg);
+}
+.menu--open .burger__line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.menu--open .burger__line:nth-child(4) {
+    transform: scaleX(0);
+}
+
+.menu--open .burger__line {
+    background-color:darkcyan;
+}
+.menu--open .menu__logo-link {
+    color: darkcyan;
+}
+
+.content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 110;
+    position: absolute;color: aliceblue;
+}
+
+.menu--open .content {
+    opacity: 0;
+}
